@@ -1,7 +1,7 @@
 div.galery {
-    border: 5px solid red;
-    min-height: 90vmin;
-    min-width: 90vmin;
+    border: 3px solid red;
+    min-height: 85vmin;
+    min-width: 10vmin;
     display: grid;
     gap: 1rem;
     grid-template-columns: 1fr 1fr 1fr;
@@ -20,7 +20,9 @@ div.galery>div{
 
 div.galery> :nth-child(1){
     background-color: grey;
-    grid-row: 2span;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
 }
 
 div.galery> :nth-child(7) {
@@ -33,11 +35,103 @@ div.galery> :nth-child(7) {
 @media (max-width: 790px) {
     div.galery {
         grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2fr 1.5fr 2fr 2fr 2fr;
+        gap: .7em;
+    }
+
+    div.galery> :nth-child(4) {
+        grid-column-start: 1;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+
+    div.galery> :nth-child(1) {
+        grid-column-start: 2;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+
+    div.galery> :nth-child(3) {
+        grid-column-start: 1;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+
+    div.galery> :nth-child(2) {
+        grid-column-start: 2;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+
+    div.galery> :nth-child(6) {
+        grid-row-start: 4;
+        grid-row-end: 4;
+        grid-column-start: 1;
+        grid-column-end: 1;
+    }
+
+    div.galery> :nth-child(5) {
+        grid-column-start: 2;
+        grid-row-start: 3;
+        grid-row-end: 5;
     }
 
     div.galery> :nth-child(7) {
-        grid-row-start: auto;
-        grid-column-start: auto;
-        grid-column-end: auto;
+        grid-row-start: 5;
+        grid-row-end: 5;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+}
+
+@media (max-width: 460px) {
+    div.galery {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1.6fr 2fr 2fr 1.5fr 1.5fr 2fr 2fr;
+        gap: 0.5;
+    }
+
+    div.galery> :nth-child(4) {
+        grid-column-start: 1;
+        grid-row-start: 4;
+        grid-row-end: 4;
+    }
+
+    div.galery> :nth-child(1) {
+        grid-column-start: 1;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+
+    div.galery> :nth-child(3) {
+        grid-column-start: 1;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+
+    div.galery> :nth-child(2) {
+        grid-column-start: 1;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+
+    div.galery> :nth-child(6) {
+        grid-row-start: 6;
+        grid-row-end: 6;
+        grid-column-start: 1;
+        grid-column-end: 1;
+    }
+
+    div.galery> :nth-child(5) {
+        grid-column-start: 1;
+        grid-row-start: 5;
+        grid-row-end: 5;
+    }
+
+    div.galery> :nth-child(7) {
+        grid-row-start: 7;
+        grid-row-end: 7;
+        grid-column-start: 1;
+        grid-column-end: 1;
     }
 }
