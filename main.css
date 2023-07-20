@@ -1,32 +1,71 @@
+body {
+    background-color: rgb(36, 33, 33);
+}
+button {
+    width: 4em;
+    height: 2em;
+}
+form>div {
+    width: 100%;
+    border: 1px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+input.vem {
+    width: 20rem;
+    height: 1rem;
+    text-align: center;
+    color: white;
+    background-color: rgb(32, 27, 27);
+    border: 2px solid white;
+}
+input.vem2 {
+    width: 1.6rem;
+    height: 1.5rem;
+    text-align: center;
+    color: white;
+    background-color: rgb(42, 37, 37);
+    border: 2px solid white;
+}
 div.galery {
-    border: 3px solid red;
+    border: 4px solid rgba(43, 1, 77, 0.658);
+    background-color: rgb(32, 27, 27);
     min-height: 85vmin;
     min-width: 10vmin;
     display: grid;
-    gap: 1rem;
+    gap: 0.8rem;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
 div.galery > div {
-    border: 3px solid darkred
+    border: 2px solid rgba(21, 92, 0, 0.726);
+    margin: 2%;
 }
 
 div.galery>div{
-    background-color: brown;
+    background-color: white;
     font-size: 5rem;
     display: grid;
     place-items: center;
 }
 
+div.galery>div img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
 div.galery> :nth-child(1){
-    background-color: grey;
+    background-color: white;
     grid-row-start: 1;
     grid-row-end: 3;
     grid-column-start: 1;
 }
 
 div.galery> :nth-child(7) {
-    background-color: lightblue;
+    background-color: white;
     grid-row-start: 3;
     grid-column-start: 1;
     grid-column-end: 3;
@@ -36,7 +75,7 @@ div.galery> :nth-child(7) {
     div.galery {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 2fr 1.5fr 2fr 2fr 2fr;
-        gap: .7em;
+        gap: .5em;
     }
 
     div.galery> :nth-child(4) {
